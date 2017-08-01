@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+    <center>
+    <% @memes.each do |meme| %>
+    <div clas="image-box">
+        <h3><%= meme.title %></h3>
+        <%= image_tag meme.image, class: "image" %>
+        <h3>Posted by <%= meme.poster %></h3>
+    </div>
+<% end %>
+</center>
+
+<%= link_to 'New Meme', new_meme_path %>
